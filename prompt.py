@@ -60,7 +60,7 @@ def srv4():
 	os.system('ssh -i ~/.ssh/id_rsa.bifi root@srv4.ibercivis.es')
 	quit()
 
-## We create a pythons dictionary with all the options, note that each name is one function
+## We create a python's dictionary with all the options, note that each name is one function
 
 options ={	0 : briana,
 		1 : belladona,
