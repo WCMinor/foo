@@ -10,7 +10,6 @@ import os
 
 def bash():
 	os.system('/bin/bash')
-	quit()
 
 ## We create a python's dictionary with all the options, note that each name is one function
 
