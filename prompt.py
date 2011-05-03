@@ -24,7 +24,7 @@ options ={	'0' : ['briana', 'ssh root@briana.traci.es'],
 		'8' : ['srv1', 'ssh -i ~/.ssh/id_rsa.bifi root@srv1.ibercivis.es'],
 		'9' : ['srv2', 'ssh -i ~/.ssh/id_rsa.bifi root@srv2.ibercivis.es'], 
 		'10' : ['srv3', 'ssh -i ~/.ssh/id_rsa.bifi root@srv3.ibercivis.es'], 
-		'11' : ['srv4', 'ssh -i ~/.ssh/id_rsa.bifi root@srv4.ibercivis.es'] 
+		'11' : ['srv4', 'ssh -i ~/.ssh/id_rsa.bifi root@srv4.ibercivis.es'], 
 		'12' : ['lxbifi27', 'ssh finito@lxbifi27.bifi.unizar.es'] 
 }
 
@@ -43,8 +43,6 @@ else:
 	# If noth0ing else was selected, execute bash
 
 	print 'executing bash intepreter'
-	import time
-	time.sleep(1)
 
 	bash()
 
