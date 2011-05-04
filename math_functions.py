@@ -36,10 +36,14 @@ def math_functions():
 #Ask fir a function name and execute it
 
 	fun = raw_input("\n\nSo, which function are we using?\nPlease enter the function name:\n")
-        for k in options.keys():
-		if fun in options[k][2]:
-			options[k][1]()
-		else:
-			pass
+
+# now, using list comprehensions
+
+	[options[lk][1]() for lk in options if fun in options[lk][2]]
+# old method not using list comprehensions
+##
+##        for k in options.keys():
+##		if fun in options[k][2]:
+##			options[k][1]()
 
 math_functions()
