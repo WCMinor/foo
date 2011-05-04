@@ -38,7 +38,7 @@ def math_functions():
 	fun = raw_input("\n\nSo, which function are we using?\nPlease enter the function name:\n")
         for k in options.keys():
 		if fun in options[k][2]:
-			fun = options[k][1]()
+			options[k][1]()
 		else:
 			pass
 
