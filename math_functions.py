@@ -17,12 +17,19 @@ def fib():
 		a, b = b, a+b
 		print a
 
+# Fourier transform
+def fouri():
+
+	print "\n\nI still don't know how to do it"
+	
+
 def math_functions():
 
 ## We create a python's dictionary with all the options, note that each name is one function
 
 	options ={      1 : ['prints the Fibonacci series from 0 to the given number', fib, 'fibonacci'],
-			2 : ['sums one and one', oneandone, '1+1']
+			2 : ['sums one and one', oneandone, '1+1'],
+			3 : ['does a Fourier transrform', fouri, 'fourier']
 		}
 
 ## Print all the options in the dic 
