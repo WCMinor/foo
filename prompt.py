@@ -14,7 +14,7 @@ def bash():
 ## We create a python's dictionary with all the options, note that each name is one function
 
 options ={	'0' : ['briana', 'ssh root@briana.traci.es'],
-		'1' : ['belladona', 'ssh root@briana.traci.es'],
+		'1' : ['belladona', 'ssh root@belladona.traci.es'],
 		'2' : ['ecodes', 'ssh root@ecodes.org'], 
 		'3' : ['panel',  'ssh root@panel.traci.es'],
 		'4' : ['panel2', 'ssh root@panel2.traci.es'], 
