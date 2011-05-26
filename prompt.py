@@ -26,7 +26,7 @@ options ={	'0' : ['briana', 'ssh root@briana.traci.es'],
 		'10' : ['srv3', 'ssh -i ~/.ssh/id_rsa.bifi root@srv3.ibercivis.es'], 
 		'11' : ['srv4', 'ssh -i ~/.ssh/id_rsa.bifi root@srv4.ibercivis.es'], 
 		'12' : ['lxbifi27', 'ssh finito@lxbifi27.bifi.unizar.es'], 
-		'13' : ['eucalyptus', 'ssh -i ~/.ssh/id_rsa.bifi eucalyptus@fron-ec2.bifi.unizar.es'] 
+		'13' : ['eucalyptus', 'ssh -i ~/.ssh/id_rsa.bifi eucalyptus@front-ec2.bifi.unizar.es'] 
 }
 
 ## Print all the options in the dic 
