@@ -3,7 +3,10 @@
 #this is a script for bundling the current running system
 #modified from one blowing in the internet, we have to copy the "creds" directory and modify the novarc file (the first line gave me errors) 
 
+#next line must point to your novarc variables file wherever it is
 . /root/creds/novarc
+
+#we're giving a name to the bucket
 SYSTEM=$(uname -r)
 read -p "Please enter your bucket/container name:" BUCKET_NAME
 
