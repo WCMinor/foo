@@ -3,8 +3,9 @@
 
 ## This script has been designed to be called instead of bash when starting a terminal
 ## it's only useful for sysadmins who use to work remotely most of time
+## you need a file called .server.list in your home directory, see the example one in the repo
 
-## Defining the bash function
+# Defining the bash function
 import os
 
 def bash():
@@ -13,10 +14,10 @@ def bash():
 	quit()
 
 
-## Create a python's dictionary reading the options from the file "server.list"
+# Create a python's dictionary reading the options from the file "server.list"
 key=1
 options = {}
-with open("server.list") as f:
+with open("~/.server.list") as f:
 	for line in f:
 		options[int(key)] = line.split()
 		key=key+1
