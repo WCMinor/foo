@@ -25,6 +25,10 @@ then
 echo "$HELP";
 else
 rsync -avz /home/vpopmail/domains/$domain/$mail_user/Maildir/ root@$remote_host:/var/www/sites/$remote_panel_user/$domain/Mailboxs/$mail_user/Maildir/
+##Move sent folder to the matching one in the Postfix maildir.
+
+#ssh root@$remote_host "mv /var/www/sites/$remote_panel_user/$domain/Mailboxs/$mail_user/Maildir/.Sent/* /var/www/sites/$remote_panel_user/$domain/Mailboxs/$mail_user/Maildir/cur/Sent/"
+
 ssh root@$remote_host "chown -R $remote_user:$remote_group /var/www/sites/$remote_panel_user/$domain/Mailboxs/$mail_user/Maildir/"
 fi
 
