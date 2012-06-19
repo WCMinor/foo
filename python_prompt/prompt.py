@@ -17,7 +17,7 @@ def bash():
 # Create a python's dictionary reading the options from the file "server.list"
 key=1
 options = {}
-with open("~/.server.list") as f:
+with open(".server.list") as f:
 	for line in f:
 		options[int(key)] = line.split()
 		key=key+1
