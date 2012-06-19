@@ -5,14 +5,15 @@
 ## it's only useful for sysadmins who use to work remotely most of time
 
 ## Defining the bash function
-priv_key="~/.ssh/id_rsa.finito"
 import os
 
 def bash():
 	print 'executing bash intepreter'
 	os.system('/opt/local/bin/bash')
 	quit()
-## We create a python's dictionary with all the options, note that each name is one function
+
+
+## Create a python's dictionary reading the options from the file "server.list"
 key=1
 options = {}
 with open("server.list") as f:
@@ -20,14 +21,15 @@ with open("server.list") as f:
 		options[int(key)] = line.split()
 		key=key+1
 
-# Print all the options in the dic 
+# Print all the options in the dic
 
 print "These are the traveling options:\n"
 for k in sorted(options.keys(),key=int):
 	print k, options[k][3]
 print "\nOr any key + enter to execute bash\n"
 
-# Get a parameter and call the correspondent function
+# Get a parameter and execute the correspondent ssh command
+# In both cases, you enter not a number or you enter a number that's not in the list, bash is executed
 
 ande = raw_input("Where are we going to:  ")
 try:
@@ -40,9 +42,6 @@ if ande in options.keys():
 	ssh="ssh ","-i ",key, " ", user+"@"+url
 	os.system("".join(ssh))
 else:
-	# If noth0ing else was selected, execute bash
-
-
 	bash()
 
 quit()
