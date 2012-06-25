@@ -26,7 +26,7 @@ with open(".server.list") as f:
 
 print "These are the traveling options:\n"
 for k in sorted(options.keys(),key=int):
-	print k, options[k][3]
+	print k, options[k][0]
 print "\nOr any key + enter to execute bash\n"
 
 # Get a parameter and execute the correspondent ssh command
