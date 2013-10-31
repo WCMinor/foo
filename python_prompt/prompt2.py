@@ -36,7 +36,7 @@ def ssh_server(button,option):
             syslog.syslog(syslog.LOG_NOTICE, h)
 	    os.system("clear")
             os.system("".join(ssh))
-	    exit_program(1)
+	    quit()
         key=key+1
 
 def menu(title, choices):
