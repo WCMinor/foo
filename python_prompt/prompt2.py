@@ -2,7 +2,7 @@ import urwid
 import os
 import syslog
 server_list=os.getcwd()+'/.server.list'
-bash='/opt/local/bin/bash'
+bash='/bin/bash'
 
 def set_list(pos):
     list=[]
