@@ -20,7 +20,9 @@ choices = set_list(0)
 
 def ssh_server(button,option):
     if option=='localhost':
-        exit_program(1)
+	global exec_bash
+	exec_bash=1
+        exit_program()
     key=1
     options = {}
     with open(server_list) as f:
@@ -36,7 +38,7 @@ def ssh_server(button,option):
             syslog.syslog(syslog.LOG_NOTICE, h)
 	    os.system("clear")
             os.system("".join(ssh))
-	    quit()
+            exit_program()
         key=key+1
 
 def menu(title, choices):
@@ -47,7 +49,7 @@ def menu(title, choices):
         body.append(urwid.AttrMap(button, None, focus_map='reversed'))
     return urwid.ListBox(urwid.SimpleFocusListWalker(body))
 
-def exit_program(button):
+def exit_program():
     raise urwid.ExitMainLoop()
 
 main = urwid.Padding(menu(u'SSH traveling options', choices), left=2, right=2)
@@ -56,4 +58,10 @@ top = urwid.Overlay(main, urwid.SolidFill(u'\N{MEDIUM SHADE}'),
     valign='middle', height=('relative', 60),
     min_width=20, min_height=9)
 urwid.MainLoop(top, palette=[('reversed', 'standout', '')]).run()
-os.system(bash)
+
+try:
+    exec_bash
+except:
+    quit()
+else:
+    os.system(bash)
