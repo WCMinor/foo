@@ -42,10 +42,8 @@ def ssh_server(button,option):
         if options[key][0]==option:
             privkey, user, url = options[key][1], options[key][2], options[key][3]
             ssh="ssh ","-i ",privkey, " ", user+"@"+url
-	    h="".join(ssh)
-            syslog.syslog(syslog.LOG_NOTICE, h)
-#            os.system("clear")
-#            os.system("".join(ssh))
+            os.system("clear")
+            os.system("".join(ssh))
             exit_program()
         key=key+1
 #-------------------------------------
