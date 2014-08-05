@@ -25,7 +25,7 @@ list_folder=$3
 #crear usuarios en las listas remotas
 create_user()
 {
-ssh root@${remote_host} "/usr/bin/mlmmj-sub -L /var/www/sites/$remote_panel_user/$domain/lists/${domain}_${h} -a ${entry}";
+ssh -n root@${remote_host} "/usr/bin/mlmmj-sub -L /var/www/sites/$remote_panel_user/$domain/lists/${domain}_${h} -a ${entry}";
 }
 
 cd $list_folder
@@ -33,7 +33,6 @@ for h in *; do
   while read entry; do
       echo "migrando mail $entry de la lista $h";
       create_user
-      echo hola;
   done < $h;
-# ssh root@$remote_host "chown -R ${remote_user}:$remote_group /var/www/sites/$remote_panel_user/$domain/lists/$domain"_"$h";
+ ssh root@$remote_host "chown -R ${remote_user}:$remote_group /var/www/sites/$remote_panel_user/$domain/lists/$domain"_"$h";
  done
