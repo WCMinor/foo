@@ -30,7 +30,9 @@ for root, dirnames, filenames in os.walk('/srv/guse/guse/apache-tomcat-6.0.36/te
 for root, dirnames, filenames in os.walk('/srv/guse/guse/apache-tomcat-6.0.36/temp/'):
   for path in filenames:
       paths.append(os.path.join(root, path))
-paths = [dir for dir in paths if not re.match(excludes, dir)]
+
+for exclude in excludes:
+        paths = [dir for dir in paths if not re.match(exclude, dir)]
 #add stuff belonging to the submission service in the dci_bridge
 #add dirs
 for root, dirnames, filenames in os.walk('/srv/guse/guse/apache-tomcat-6.0.36/temp/dci_bridge/0/'):
