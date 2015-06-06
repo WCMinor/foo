@@ -1,0 +1,12 @@
+localhost
+crudo ~/.ssh/id_rsa.finito root crudo.theothernet.co.uk
+backup ~/.ssh/id_rsa.finito root backup.theothernet.co.uk
+ecodes ~/.ssh/id_rsa.finito root ecodes.org
+domainsconecta ~/.ssh/id_rsa.finito root domainsconecta.com
+grasscms ~/.ssh/id_rsa.finito root grasscms.com
+UoW_ecs-docs ~/.ssh/id_rsa.finito root docs.ecs.westminster.ac.uk
+UoW_spiderman ~/.ssh/id_rsa.finito ferrerd spiderman.cpc.wmin.ac.uk
+UoW_dg-server2 ~/.ssh/id_rsa.finito root dg-server2.wmin.ac.uk
+UoW_dg-portal ~/.ssh/id_rsa.finito root dg-portal.wmin.ac.uk
+UoW_dg-login ~/.ssh/id_rsa.finito root dg-login.cpc.wmin.ac.uk
+UoW-login ~/.ssh/id_rsa.finito ferrerd compute1.wmin.ac.uk
