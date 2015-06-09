@@ -1,0 +1,16 @@
+1	e-clg50
+3	e-n5110
+2	h-l1cr4
+2	h-l1south
+2	h-l2east
+6	l-103a
+8	l-lac
+8	l-lib
+1	m-b2
+1	m-b7
+34	m-lib
+6	m-m601
+4	n-cg26
+9	n-lib3f
+10	n-lib4b
+6	n-lib4f
