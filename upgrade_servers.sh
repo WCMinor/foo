@@ -1,4 +1,14 @@
 #!/bin/bash
+
+echo "please enter the path to your private key"
+read keypath
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+	  eval `ssh-agent -s`
+	    ssh-add
+fi
+ssh-add $keypath
+command='aptitude update && aptitude -y upgrade'
+
 echo "upgrade vms?"
 echo "y/n"
 read -n1 -s vms
@@ -26,7 +36,7 @@ fi
 function upgrade_hosts {
 echo "upgrading physical hosts"
 for host in $(seq -w 01 34) 
-do ssh root@10.0.0.1$host 'aptitude upgrade -y'
+do ssh root@10.0.0.1$host "$command"
 done
 }
 
@@ -52,12 +62,12 @@ for vm in \
 	161.74.26.18\
 	161.74.26.56\
 	dg-portal.wmin.ac.uk
-	do ssh root@$vm 'aptitude upgrade -y'
+	do ssh root@$vm "$command"
 	done
 }	
 if $do_vms; then
 	upgrade_vms
-fi	
+fi
 if $do_hosts; then
 	upgrade_hosts
 fi
